@@ -18,16 +18,16 @@ class Vetor{
         dados = new T[this->tamanho];
     }
 
-    Vetor(const &Vetor copia){
+    Vetor(const Vetor& copia){
         this->tamanho = copia.tamanho;
         this->dados = new T[tamanho];
         for (int i = 0; i < tamanho; i++){
-            this-dados[i] = copia.dados[i];
+            this->dados[i] = copia.dados[i];
         }
     }
 
     ~Vetor(){
-        delete T; //conferir se esta corretor
+        delete[] dados; //conferir se esta corretor
     }
 
     SetElemento(int i, T Elemento){
